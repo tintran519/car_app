@@ -15,3 +15,21 @@ Car.delete_all
    )
 
 end
+
+100.times do
+  Book.create(title: Faker::Book.title,
+    year: Faker::Number.between(1990,2016),
+    length: Faker::Number.between(250,1000)
+    )
+end
+
+# books = Book.all
+# books.each do |book|
+#   if book.year > 1950
+#     book.title = "Harry Potter"
+#     book.save
+#   elsif book.year < 1950
+#     book.destroy
+#   end
+# end
+
